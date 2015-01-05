@@ -69,7 +69,7 @@ module.exports = {
     // Get an array of all users in the User collection (e.g. table)
     User.find(function foundUsers (err, users) {
       if (err) return next(err);
-      // pass the array doen to the /views/index.ejs page
+      // pass the array users to the /views/index.ejs page
       res.view({
         users: users
       });
