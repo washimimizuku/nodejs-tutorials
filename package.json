@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/washimimizuku/feathers-chat#readme",
   "dependencies": {
-    "@feathersjs/feathers": "^4.5.2"
+    "@feathersjs/express": "^4.5.2",
+    "@feathersjs/feathers": "^4.5.2",
+    "@feathersjs/socketio": "^4.5.2"
   }
 }
