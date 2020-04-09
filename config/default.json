@@ -9,7 +9,7 @@
   "authentication": {
     "entity": "user",
     "service": "users",
-    "secret": "iiEwq9J6HRhhi23Ga8OH4xHMapQ=",
+    "secret": "bCfw2mvIyNdDAu7ohVsXypTSqp4=",
     "authStrategies": [
       "jwt",
       "local"
@@ -28,5 +28,5 @@
       "passwordField": "password"
     }
   },
-  "mongodb": "mongodb://localhost:27017/feathers_chat"
+  "nedb": "../data"
 }
