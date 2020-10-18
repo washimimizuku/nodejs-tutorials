@@ -12,7 +12,7 @@ const commentsByPostId = {};
 
 app.get('/posts/:id/comments', (req, res) => {
     res.send(commentsByPostId[req.params.id] || []);
-})
+});
 
 app.post('/posts/:id/comments', async (req, res) => {
     const commentId = randomBytes(4).toString('hex');
@@ -38,7 +38,7 @@ app.post('/posts/:id/comments', async (req, res) => {
     });
 
     res.status(201).send(comments);
-})
+});
 
 app.post('/events', (req, res) => {
     console.log('Received Event', req.body.type);
@@ -48,4 +48,4 @@ app.post('/events', (req, res) => {
 
 app.listen(4001, () => {
     console.log('Listening on 4001');
-})
+});
