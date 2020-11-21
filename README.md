@@ -13,3 +13,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 gcloud auth login
 gcloud init
 gcloud container clusters get-credentials ticketing-dev
+
+### JWT
+
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=Qx9MPedux2tHgywj
