@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          # image: washimimizuku/auth
-          image: us.gcr.io/ticketing-dev-296314/auth
+          image: washimimizuku/auth
           env:
             - name: JWT_KEY
               valueFrom:
