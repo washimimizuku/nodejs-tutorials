@@ -55,7 +55,7 @@ it('returns a 400 with missing email', async () => {
         .expect(400);
 });
 
-it('returns a 400 with missing  password', async () => {
+it('returns a 400 with missing password', async () => {
     return request(app)
         .post('/api/users/signup')
         .send({
