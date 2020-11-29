@@ -10,7 +10,7 @@ landingPage.getInitialProps = async ({ req }) => {
         // we are on the server!
         // requests should be made to http://ingress-nginx.ingress-nginx...
         const { data } = await axios.get(
-            'http://ingress-nginx.ingress-nginx.svc.cluster.local/api/users/currentuser',
+            'http://ingress-nginx-controller.ingress-nginx.svc.cluster.local/api/users/currentuser',
             {
                 headers: req.headers,
             }
