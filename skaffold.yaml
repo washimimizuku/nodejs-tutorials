@@ -1,26 +1,26 @@
 apiVersion: skaffold/v2alpha3
 kind: Config
 deploy:
-    kubectl:
-        manifests:
-            - ./infra/k8s/*
+  kubectl:
+    manifests:
+      - ./infra/k8s/*
 build:
-    local:
-        push: false
-    artifacts:
-        - image: washimimizuku/auth
-          context: auth
-          docker:
-              dockerfile: Dockerfile
-          sync:
-              manual:
-                  - src: 'src/**/*.ts'
-                    dest: .
-        - image: washimimizuku/client
-          context: client
-          docker:
-              dockerfile: Dockerfile
-          sync:
-              manual:
-                  - src: '**/*.js'
-                    dest: .
+  local:
+    push: false
+  artifacts:
+    - image: washimimizuku/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
+    - image: washimimizuku/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .

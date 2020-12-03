@@ -4,16 +4,16 @@ import Router from 'next/router';
 import useRequest from '../../hooks/use-request';
 
 export default function SignOutPage() {
-    const { doRequest } = useRequest({
-        url: '/api/users/signout',
-        method: 'post',
-        body: {},
-        onSuccess: () => Router.push('/'),
-    });
+  const { doRequest } = useRequest({
+    url: '/api/users/signout',
+    method: 'post',
+    body: {},
+    onSuccess: () => Router.push('/'),
+  });
 
-    useEffect(() => {
-        doRequest();
-    }, []);
+  useEffect(() => {
+    doRequest();
+  }, []);
 
-    return <div>Signing you out...</div>;
+  return <div>Signing you out...</div>;
 }

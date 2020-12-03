@@ -3,15 +3,15 @@ import request from 'supertest';
 import { app } from '../app';
 
 export const cookieHelper = async (email: string, password: string) => {
-    const response = await request(app)
-        .post('/api/users/signup')
-        .send({
-            email,
-            password,
-        })
-        .expect(201);
+  const response = await request(app)
+    .post('/api/users/signup')
+    .send({
+      email,
+      password,
+    })
+    .expect(201);
 
-    const cookie = response.get('Set-Cookie');
+  const cookie = response.get('Set-Cookie');
 
-    return cookie;
+  return cookie;
 };

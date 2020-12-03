@@ -4,22 +4,22 @@ import { app } from '../../app';
 import { cookieHelper } from '../../test/cookie-helper';
 
 it('responds with details about the current user', async () => {
-    const cookie = await cookieHelper('test@test.com', 'password');
+  const cookie = await cookieHelper('test@test.com', 'password');
 
-    const response = await request(app)
-        .get('/api/users/currentuser')
-        .set('Cookie', cookie)
-        .send()
-        .expect(200);
+  const response = await request(app)
+    .get('/api/users/currentuser')
+    .set('Cookie', cookie)
+    .send()
+    .expect(200);
 
-    expect(response.body.currentUser.email).toEqual('test@test.com');
+  expect(response.body.currentUser.email).toEqual('test@test.com');
 });
 
 it('responds with null if not authenticated', async () => {
-    const response = await request(app)
-        .get('/api/users/currentuser')
-        .send()
-        .expect(200);
+  const response = await request(app)
+    .get('/api/users/currentuser')
+    .send()
+    .expect(200);
 
-    expect(response.body.currentUser).toEqual(null);
+  expect(response.body.currentUser).toEqual(null);
 });
