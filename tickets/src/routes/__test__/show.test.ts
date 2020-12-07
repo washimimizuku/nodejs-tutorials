@@ -2,7 +2,6 @@ import request from 'supertest';
 import mongoose from 'mongoose';
 
 import { app } from '../../app';
-
 import { cookieHelper } from '../../test/cookie-helper';
 
 it('returns a 404 if the ticket is not found', async () => {

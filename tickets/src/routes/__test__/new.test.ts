@@ -1,7 +1,7 @@
 import request from 'supertest';
+
 import { app } from '../../app';
 import { Ticket } from '../../models/Ticket';
-
 import { cookieHelper } from '../../test/cookie-helper';
 
 it('has a route handler listening to /api/tickets for post requests', async () => {
