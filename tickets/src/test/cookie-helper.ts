@@ -1,12 +1,13 @@
 import request from 'supertest';
 import jwt from 'jsonwebtoken';
+import mongoose from 'mongoose';
 
 import { app } from '../app';
 
 export const cookieHelper = async (email: string) => {
   // Build a JWT payload. { id, email }
   const payload = {
-    id: 'test_id_123',
+    id: new mongoose.Types.ObjectId().toHexString(),
     email: email,
   };
 
