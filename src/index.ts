@@ -6,6 +6,13 @@ export * from './errors/not-authorized-error';
 export * from './errors/not-found-error';
 export * from './errors/request-validation-error';
 
+// Re-export code from events
+export * from './events/listener';
+export * from './events/publisher';
+export * from './events/subjects';
+export * from './events/ticket-created-event';
+export * from './events/ticket-updated-event';
+
 // Re-export code from middlewares
 export * from './middlewares/current-user';
 export * from './middlewares/error-handler';
