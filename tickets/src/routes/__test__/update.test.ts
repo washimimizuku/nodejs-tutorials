@@ -5,6 +5,7 @@ import { app } from '../../app';
 import { Ticket } from '../../models/Ticket';
 import { cookieHelper } from '../../test/cookie-helper';
 import { response } from 'express';
+import { natsWrapper } from '../../nats-wrapper';
 
 it('returns a 404 if the provided id does not exist', async () => {
   const id = new mongoose.Types.ObjectId().toHexString();
@@ -119,4 +120,27 @@ it('updates the ticket with provided valid inputs', async () => {
 
   expect(ticketResponse.body.title).toEqual('Test title 2');
   expect(ticketResponse.body.price).toEqual(20);
+});
+
+it('publishes an event', async () => {
+  const cookie = await cookieHelper('test@test.com');
+
+  const response = await request(app)
+    .post('/api/tickets')
+    .set('Cookie', cookie)
+    .send({
+      title: 'Test title',
+      price: 10,
+    });
+
+  await request(app)
+    .put(`/api/tickets/${response.body.id}`)
+    .set('Cookie', cookie)
+    .send({
+      title: 'Test title 2',
+      price: 20,
+    })
+    .expect(200);
+
+  expect(natsWrapper.client.publish).toHaveBeenCalled();
 });
