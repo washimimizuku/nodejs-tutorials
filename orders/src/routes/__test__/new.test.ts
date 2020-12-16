@@ -54,7 +54,7 @@ it('returns an error if the ticket is already reserved', async () => {
 
   const order = Order.build({
     ticket,
-    userId: 'SOMN_USER_ID',
+    userId: 'SOME_USER_ID',
     status: OrderStatus.Created,
     expiresAt: new Date(),
   });
@@ -72,6 +72,9 @@ it('returns an error if the ticket is already reserved', async () => {
 it('reserves a ticket', async () => {
   const cookie = await cookieHelper('test@test.com');
 
+  let orders = await Order.find({});
+  expect(orders.length).toEqual(0);
+
   const ticket = Ticket.build({
     title: 'concert',
     price: 20,
@@ -85,4 +88,7 @@ it('reserves a ticket', async () => {
       ticketId: ticket.id,
     })
     .expect(201);
+
+  orders = await Order.find({});
+  expect(orders.length).toEqual(1);
 });
