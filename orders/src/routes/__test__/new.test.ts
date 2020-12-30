@@ -51,7 +51,6 @@ it('returns an error if the ticket is already reserved', async () => {
     title: 'concert',
     price: 20,
   });
-  console.log(ticket);
   await ticket.save();
 
   const order = Order.build({
