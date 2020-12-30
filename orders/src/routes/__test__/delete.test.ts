@@ -5,6 +5,7 @@ import { app } from '../../app';
 import { Order, OrderStatus } from '../../models/order';
 import { Ticket } from '../../models/ticket';
 import { cookieHelper } from '../../test/cookie-helper';
+import { natsWrapper } from '../../nats-wrapper';
 
 const createTicket = async (title: string, price: number) => {
   const ticket = Ticket.build({
@@ -76,4 +77,25 @@ it('marks an order as cancelled', async () => {
   expect(cancelledOrder!.status).toEqual(OrderStatus.Cancelled);
 });
 
-it.todo('emits an order cancelled event');
+it('emits an order cancelled event', async () => {
+  // Create a ticket
+  const ticket = await createTicket('Test title 1', 10);
+
+  const cookie = await cookieHelper('test@test.com');
+
+  // Make a request to build an order with this ticket
+  const { body: order } = await request(app)
+    .post('/api/orders')
+    .set('Cookie', cookie)
+    .send({ ticketId: ticket.id })
+    .expect(201);
+
+  // Make a request to cancel the order
+  await request(app)
+    .delete(`/api/orders/${order.id}`)
+    .set('Cookie', cookie)
+    .send()
+    .expect(204);
+
+  expect(natsWrapper.client.publish).toHaveBeenCalled();
+});
