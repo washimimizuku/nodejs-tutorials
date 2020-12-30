@@ -7,6 +7,7 @@ import { cookieHelper } from '../../test/cookie-helper';
 
 const createTicket = async (title: string, price: number) => {
   const ticket = Ticket.build({
+    id: mongoose.Types.ObjectId().toHexString(),
     title: title,
     price: price,
   });

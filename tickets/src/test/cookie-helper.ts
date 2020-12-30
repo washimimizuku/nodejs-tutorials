@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 export const cookieHelper = async (email: string) => {
   // Build a JWT payload. { id, email }
   const payload = {
-    id: new mongoose.Types.ObjectId().toHexString(),
+    id: mongoose.Types.ObjectId().toHexString(),
     email: email,
   };
 

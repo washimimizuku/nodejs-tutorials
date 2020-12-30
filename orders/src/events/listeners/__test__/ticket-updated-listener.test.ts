@@ -15,7 +15,7 @@ const setup = async () => {
 
   // Create and save a ticket
   const ticket = Ticket.build({
-    id: new mongoose.Types.ObjectId().toHexString(),
+    id: mongoose.Types.ObjectId().toHexString(),
     title: 'concert',
     price: 20,
   });
@@ -27,7 +27,7 @@ const setup = async () => {
     version: ticket.version + 1,
     title: 'new concert',
     price: 999,
-    userId: new mongoose.Types.ObjectId().toHexString(),
+    userId: mongoose.Types.ObjectId().toHexString(),
   };
 
   // Create a fake message object
@@ -44,7 +44,7 @@ const setup = async () => {
   };
 };
 
-it('findsm updates and saves a ticket', async () => {
+it('finds, updates and saves a ticket', async () => {
   const { msg, data, ticket, listener } = await setup();
 
   await listener.onMessage(data, msg);
