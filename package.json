@@ -1,6 +1,6 @@
 {
   "name": "@washimimizuku/ticketing-common",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Common",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
