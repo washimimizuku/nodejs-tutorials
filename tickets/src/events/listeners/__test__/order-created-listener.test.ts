@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 import {
-  OrderCancelledEvent,
   OrderCreatedEvent,
   OrderStatus,
 } from '@washimimizuku/ticketing-common';
