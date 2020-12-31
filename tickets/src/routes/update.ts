@@ -5,6 +5,7 @@ import {
   NotFoundError,
   requireAuth,
   NotAuthorizedError,
+  BadRequestError,
 } from '@washimimizuku/ticketing-common';
 
 import { Ticket } from '../models/Ticket';
@@ -28,6 +29,11 @@ router.put(
 
     if (!ticket) {
       throw new NotFoundError();
+    }
+
+    // If ticket is reserved
+    if (ticket.orderId) {
+      throw new BadRequestError('Cannot edit a reserved ticket');
     }
 
     if (ticket.userId !== req.currentUser!.id) {
