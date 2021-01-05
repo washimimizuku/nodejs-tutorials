@@ -15,6 +15,7 @@ export * from './events/ticket-updated-event';
 export * from './events/types/order-status';
 export * from './events/order-created-event';
 export * from './events/order-cancelled-event';
+export * from './events/expiration-complete-event';
 
 // Re-export code from middlewares
 export * from './middlewares/current-user';
