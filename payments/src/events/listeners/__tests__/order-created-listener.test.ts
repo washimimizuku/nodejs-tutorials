@@ -40,7 +40,7 @@ it('replicates the order info', async () => {
   expect(order!.price).toEqual(data.ticket.price);
 });
 
-it('rzcks the message', async () => {
+it('acks the message', async () => {
   const { listener, data, msg } = await setup();
 
   await listener.onMessage(data, msg);
