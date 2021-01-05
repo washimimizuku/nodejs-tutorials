@@ -3,7 +3,6 @@ import { updateIfCurrentPlugin } from 'mongoose-update-if-current';
 import { OrderStatus } from '@washimimizuku/ticketing-common';
 
 import { TicketDoc } from './ticket';
-import { version } from 'node-nats-streaming';
 
 export { OrderStatus };
 
@@ -56,7 +55,7 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-orderSchema.set('versionKey', version);
+orderSchema.set('versionKey', 'version');
 orderSchema.plugin(updateIfCurrentPlugin);
 
 orderSchema.statics.build = (attrs: OrderAttrs) => {
