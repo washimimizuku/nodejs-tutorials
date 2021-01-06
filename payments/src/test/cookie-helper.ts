@@ -1,10 +1,10 @@
 import jwt from 'jsonwebtoken';
 import mongoose from 'mongoose';
 
-export const cookieHelper = async (email: string) => {
+export const cookieHelper = async (email: string, id?: string) => {
   // Build a JWT payload. { id, email }
   const payload = {
-    id: mongoose.Types.ObjectId().toHexString(),
+    id: id || mongoose.Types.ObjectId().toHexString(),
     email: email,
   };
 

@@ -16,4 +16,5 @@ gcloud container clusters get-credentials ticketing-dev
 
 ### JWT
 
-kubectl create secret generic jwt-secret --from-literal=JWT_KEY=Qx9MPedux2tHgywj
+kubectl create secret generic jwt-secret --from-literal=JWT_KEY=SOME_SECRET_KEY
+kubectl create secret generic stripe-secret --from-literal=STRIPE_KEY=SOME_SECRET_KEY
