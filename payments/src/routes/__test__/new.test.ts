@@ -5,6 +5,7 @@ import { app } from '../../app';
 import { Order } from '../../models/order';
 import { cookieHelper } from '../../test/cookie-helper';
 import { stripe } from '../../stripe';
+import { Payment } from '../../models/payments';
 
 jest.mock('../../stripe');
 
@@ -92,4 +93,10 @@ it('returns a 201 with valid inputs', async () => {
   expect(chargeOptions.source).toEqual('tok_visa');
   expect(chargeOptions.amount).toEqual(20 * 100);
   expect(chargeOptions.currency).toEqual('eur');
+
+  const payment = await Payment.findOne({
+    orderId: order.id,
+    stripeId: 'FAKE_STRIPE_ID',
+  });
+  expect(payment).not.toBeNull();
 });
