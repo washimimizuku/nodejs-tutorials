@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ts-node-dev src/index.ts",
     "test": "jest --watchAll --no-cache --collectCoverage",
+    "test:ci": "jest",
     "coverage": "jest --collectCoverage"
   },
   "jest": {
