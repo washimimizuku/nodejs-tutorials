@@ -25,11 +25,14 @@
     "sails-disk": "~0.10.0",
     "sails-mongo": "^0.10.4",
     "sails-mysql": "^0.10.6",
-    "sails-postgresql": "^1.0.0"
+    "sails-postgresql": "^1.0.0",
+    "snyk": "^1.583.0"
   },
   "scripts": {
     "start": "node app.js",
-    "debug": "node debug app.js"
+    "debug": "node debug app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "app.js",
   "repository": {
@@ -37,5 +40,6 @@
     "url": "git://github.com/nbarr/activityOverlord.git"
   },
   "author": "nbarr",
-  "license": ""
+  "license": "",
+  "snyk": true
 }
