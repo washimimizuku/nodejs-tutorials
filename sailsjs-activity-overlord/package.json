@@ -23,7 +23,7 @@
     "rc": "~0.5.0",
     "sails": "~1.2.4",
     "sails-disk": "~0.10.0",
-    "sails-mongo": "^0.10.4",
+    "sails-mongo": "^0.12.2",
     "sails-mysql": "^0.12.2",
     "sails-postgresql": "^1.0.0",
     "snyk": "^1.583.0"
