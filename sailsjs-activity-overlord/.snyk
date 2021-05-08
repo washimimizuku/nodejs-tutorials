@@ -9,3 +9,6 @@ patch:
   'npm:ms:20170412':
     - sails-postgresql > machinepack-postgresql > debug > ms:
         patched: '2021-05-06T07:29:40.149Z'
+  'npm:qs:20140806-1':
+    - grunt-contrib-watch > tiny-lr-fork > qs:
+        patched: '2021-05-08T17:56:23.890Z'
