@@ -18,3 +18,15 @@ patch:
         patched: '2021-05-08T18:20:01.015Z'
     - sails-mysql > waterline-sequel > lodash:
         patched: '2021-05-08T18:20:01.015Z'
+    - sails-disk > machinepack-fs > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-strings > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-util > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-json > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-strings > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-util > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
