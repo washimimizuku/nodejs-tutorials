@@ -30,3 +30,11 @@ patch:
         patched: '2021-05-08T18:19:19.841Z'
     - sails-disk > machinepack-fs > machinepack-util > machine > lodash:
         patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > waterline-criteria > lodash:
+        patched: '2021-05-08T18:23:15.568Z'
+    - sails-disk > waterline-cursor > lodash:
+        patched: '2021-05-08T18:23:15.568Z'
+    - sails-mysql > waterline-cursor > lodash:
+        patched: '2021-05-08T18:23:15.568Z'
+    - sails-mysql > waterline-sequel > lodash:
+        patched: '2021-05-08T18:23:15.568Z'
