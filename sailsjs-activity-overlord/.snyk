@@ -14,11 +14,15 @@ patch:
     - grunt-contrib-watch > tiny-lr > body-parser > debug > ms:
         patched: '2021-05-08T17:57:29.639Z'
   'npm:lodash:20180130':
-    - sails-disk > waterline-criteria > lodash:
-        patched: '2021-05-08T18:16:22.289Z'
-    - sails-disk > waterline-cursor > lodash:
-        patched: '2021-05-08T18:16:22.289Z'
-    - sails-mysql > waterline-cursor > lodash:
-        patched: '2021-05-08T18:16:22.289Z'
-    - sails-mysql > waterline-sequel > lodash:
-        patched: '2021-05-08T18:16:22.289Z'
+    - sails-disk > machinepack-fs > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-strings > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-util > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-json > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-strings > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
+    - sails-disk > machinepack-fs > machinepack-util > machine > lodash:
+        patched: '2021-05-08T18:19:19.841Z'
