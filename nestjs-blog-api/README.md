@@ -26,6 +26,8 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+This tutorial can be found here: https://www.freecodecamp.org/news/build-web-apis-with-nestjs-beginners-guide/
+
 ## Installation
 
 ```bash
