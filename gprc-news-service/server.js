@@ -32,8 +32,13 @@ const news = [
 ];
 
 server.addService(newsProto.NewsService.service, {
-  GetAllNews: (_, callback) => {
+  getAllNews: (_, callback) => {
     callback(null, news);
+  },
+  addNews: (call, callback) => {
+    const _news = { id: Date.now(), ...call.request };
+    news.push(_news);
+    callback(null, _news);
   },
 });
 
