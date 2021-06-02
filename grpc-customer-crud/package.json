@@ -1,0 +1,20 @@
+{
+  "name": "grpc-customer-crud",
+  "version": "1.0.0",
+  "description": "A gRPC tutorial from https://blog.logrocket.com/creating-a-crud-api-with-node-express-and-grpc/",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "keywords": [],
+  "author": "Diogo Souza",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.6.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "grpc": "^1.24.10",
+    "hbs": "^4.1.2",
+    "uuid": "^8.3.2"
+  }
+}
