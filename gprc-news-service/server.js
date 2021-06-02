@@ -57,7 +57,7 @@ server.addService(newsProto.NewsService.service, {
   },
   editNews: (_, callback) => {
     const newsId = _.request.id;
-    const newsItem = news.find(({ id }) => newsId == id);
+    let newsItem = news.find(({ id }) => newsId == id);
 
     newsItem.title = _.request.title;
     newsItem.body = _.request.body;
