@@ -1,4 +1,3 @@
-// test.js
 // get all news
 const client = require('./client');
 

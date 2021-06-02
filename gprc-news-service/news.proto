@@ -15,12 +15,12 @@ service NewsService {
     rpc AddNews (News) returns (News) {}
 }
 
+message NewsId {
+    string id = 1;
+}
+
 message Empty {}
 
 message NewsList {
-    repeated News news = 1;
-}
-
-message NewsId {
-    string id = 1;
+   repeated News news = 1;
 }
