@@ -33,7 +33,7 @@ let news = [
 
 server.addService(newsProto.NewsService.service, {
   getAllNews: (_, callback) => {
-    callback(null, news);
+    callback(null, { dsd: 'sdds' });
   },
   getNews: (_, callback) => {
     const newsId = _.request.id;
