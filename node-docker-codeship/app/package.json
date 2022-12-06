@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  
   "dependencies": {
-    "express": "4.0.0",
+    "express": "4.17.3",
     "mocha": "^10.1.0",
-    "redis": "^0.12.1"
-  }
+    "redis": "^0.12.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
