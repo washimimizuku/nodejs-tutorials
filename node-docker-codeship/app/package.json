@@ -8,7 +8,7 @@
     "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "express": "4.18.2",
+    "express": "4.19.2",
     "mocha": "^10.1.0",
     "redis": "^0.12.1",
     "@snyk/protect": "latest"
