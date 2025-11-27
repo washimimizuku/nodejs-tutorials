@@ -46,7 +46,7 @@
     "!*/__tests__"
   ],
   "dependencies": {
-    "@loopback/boot": "^2.5.1",
+    "@loopback/boot": "^5.0.10",
     "@loopback/core": "^2.18.0",
     "@loopback/context": "^3.18.0",
     "@loopback/openapi-v3": "^3.4.9",
@@ -54,7 +54,7 @@
     "@loopback/rest": "^9.3.1",
     "@loopback/rest-explorer": "^4.1.2",
     "@loopback/service-proxy": "^2.3.8",
-    "loopback-connector-rest": "^3.7.0",
+    "loopback-connector-rest": "^5.0.1",
     "tslib": "^1.14.1"
   },
   "devDependencies": {
