@@ -42,10 +42,10 @@
   "dependencies": {
     "@feathersjs/authentication-local": "^4.5.18",
     "@feathersjs/authentication": "^5.0.9",
-    "@feathersjs/authentication-oauth": "^5.0.31",
+    "@feathersjs/authentication-oauth": "^5.0.32",
     "@feathersjs/configuration": "^5.0.0",
     "@feathersjs/errors": "^4.5.17",
-    "@feathersjs/express": "^5.0.31",
+    "@feathersjs/express": "^5.0.32",
     "@feathersjs/feathers": "^4.5.16",
     "@feathersjs/socketio": "^5.0.31",
     "@feathersjs/transport-commons": "^4.5.18",
