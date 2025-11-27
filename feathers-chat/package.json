@@ -41,9 +41,9 @@
   "types": "lib/",
   "dependencies": {
     "@feathersjs/authentication-local": "^4.5.18",
-    "@feathersjs/authentication": "^4.5.17",
+    "@feathersjs/authentication": "^5.0.9",
     "@feathersjs/authentication-oauth": "^5.0.31",
-    "@feathersjs/configuration": "^4.5.17",
+    "@feathersjs/configuration": "^5.0.0",
     "@feathersjs/errors": "^4.5.17",
     "@feathersjs/express": "^5.0.31",
     "@feathersjs/feathers": "^4.5.16",
@@ -55,7 +55,7 @@
     "helmet": "^3.22.0",
     "nedb": "^1.8.0",
     "serve-favicon": "^2.5.0",
-    "winston": "^3.11.0"
+    "winston": "^3.12.0"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
