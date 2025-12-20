@@ -1,0 +1,62 @@
+openapi: 3.0.2
+info:
+    title: __MICROSERVICE_NAME__
+    version: 1.0.0
+    description: __MICROSERVICE_DESCRIPTION__.
+    contact:
+        name: Nuno Barreto
+        email: nbarreto@gmail.com
+servers:
+    -
+        url: /api/v1
+        description: 'The first version of the __MICRO_SERVICE_NAME__.'
+paths:
+    /authenticate:
+        post:
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/AuthenticationClient'
+                required: true
+            responses:
+                '200':
+                    description: Authentication token correctly received.
+                '400':
+                    description: The body parameters client_id and client_secret are mandatory.
+                '401':
+                    description: Request failed with status code 401.
+    /example:
+        post:
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: '#/components/schemas/Example'
+                required: true
+            responses:
+                '201':
+                    description: New entry created.
+components:
+    schemas:
+        AuthenticationClient:
+            title: Root Type for AuthenticationClient
+            description: ''
+            type: object
+            properties:
+                client_id:
+                    type: string
+                client_secret:
+                    type: string
+            example:
+                client_id: SOME_CLIENT_ID
+                client_secret: SOME_CLIENT_SECRET
+        Example:
+            title: Root Type for Example
+            description: ''
+            type: object
+            properties:
+                message:
+                    type: string
+            example:
+                message: This is an example.
